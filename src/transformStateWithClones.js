@@ -20,7 +20,7 @@ function transformStateWithClones(state, actions) {
     switch (action.type) {
       case 'clear':
         // 'clear'- criar um objeto com state vazio.
-        currentState = [];
+        currentState = {};
         break;
 
       case 'addProperties':
