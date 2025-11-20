@@ -8,22 +8,13 @@
  */
 function transformStateWithClones(state, actions) {
   // write code here
-  switch (actions.type) {
-    case 'addPropreties':
-      for (const action of actions) {
-        Object.assign(state, action.extraDate);
-      }
-    case 'removeProperties':
-      for (const key of actions) {
-        delete state[key];
-      }
+  const history = []; // array para guardar os resultados
+  let current = { ...state} //cópia do estado atual, pois não podemos alterar o original
+  for (const action of actions) {
+    //loop para percorrer cada tipo de ação
 
-    case 'clear':
-      for (const key in actions) {
-        delete state[key];
-      }
   }
-
+  return history;
 }
 
 module.exports = transformStateWithClones;
