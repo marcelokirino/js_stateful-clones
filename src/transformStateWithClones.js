@@ -50,7 +50,7 @@ function transformStateWithClones(state, actions) {
         break;
     }
     // aqui vai adicionar no array criado para receber as mudanças
-    history.push(currentState);
+    history.push({ ...currentState });
   }
 
   return history;
